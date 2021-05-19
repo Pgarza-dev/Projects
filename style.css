@@ -1,0 +1,325 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #303841;
+  font-family: "Poppins", sans-serif;
+  color: rgb(235, 233, 233);
+  line-height: 1em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* navbar */
+.nav-container {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #be3144;
+  border: solid;
+  border-right: hidden;
+  border-left: hidden;
+  border-top: hidden;
+  border-color: black;
+  border-width: 2px;
+  overflow: hidden;
+}
+
+.nav-container :hover {
+  display: inline-block;
+  border: solid;
+  transition: 0.9s ease;
+  border-width: 1px;
+  background-color: #303841;
+  border-color: rgb(235, 233, 233);
+}
+
+nav {
+  display: flex;
+  top: 0px;
+  left: 0px;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  margin-right: 2em;
+  padding: 1em;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+/* navbar links */
+a {
+  display: block;
+  color: rgb(235, 233, 233);
+  font-size: 2.5rem;
+  padding: 4rem 2rem 4rem 2rem;
+  text-align: center;
+}
+
+/* about section */
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 4.5rem;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #be3144;
+  font-style: italic;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+p {
+  color: rgb(235, 233, 233);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* work section */
+.project-container {
+  text-align: center;
+  align-items: center;
+  font-size: 4.2rem;
+  color: rgb(235, 233, 233);
+  padding-top: 5%;
+  height: 130vh;
+  background-color: #45567d;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: #3a3d40;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 15.2em;
+  height: 1.2em;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+img {
+  opacity: 1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+img:hover {
+  opacity: 0.5;
+  transition: 0.5s ease;
+  border-width: 1px;
+  border-color: black;
+}
+
+.project-tile {
+  height: 9em;
+  width: 16em;
+  color: black;
+}
+
+/* contact section */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 4.5rem;
+  width: 100%;
+  height: 85vh;
+}
+
+.fa-linkedin {
+  background-color: inherit;
+  color: rgb(235, 233, 233);
+  box-sizing: inherit;
+}
+
+.fa-google {
+  background-color: inherit;
+  color: rgb(235, 233, 233);
+  box-sizing: inherit;
+}
+
+.fa-mobile-alt {
+  background-color: inherit;
+  color: rgb(235, 233, 233);
+  box-sizing: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  padding: 1.5em;
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  opacity: 0.5;
+  transition: 0.9s ease;
+  border: solid;
+  border-right: hidden;
+  border-left: hidden;
+  border-width: 1px;
+  border-color: rgb(235, 233, 233);
+}
+
+footer {
+  border-top: solid;
+  border-color: #be3144;
+  border-width: 5px;
+  padding-bottom: 100px;
+}
+
+/* I have set some media querys to adjust for different screen sizes
+I have used rem becuase it is a relative size unit for the document font size.
+I have used em units at break points to calculat screen size divided by browser font size. */
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 60%;
+  }
+  .nav-container,
+  nav,
+  #welcome-section,
+  .project-container,
+  .contact-container,
+  .contact-links,
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+/* 760px / 16px */
+@media (max-width: 47.5em) {
+  .nav-container,
+  nav,
+  .project-container,
+  .project-title,
+  .project-tile,
+  .contact-container,
+  .contact-links {
+    font-size: 1rem;
+  }
+}
+
+/* 460px / 16px */
+@media (max-width: 28.75em) {
+  .nav-container,
+  nav,
+  #welcome-section,
+  .project-container,
+  .project-title,
+  .project-tile,
+  .contact-container,
+  .contact-links,
+  .btn {
+    font-size: 55%;
+  }
+}
+
+/* 400px / 16px */
+@media (max-width: 25em) {
+  .nav-container,
+  nav,
+  a,
+  #welcome-section,
+  .project-container,
+  .project-title,
+  .project-tile,
+  .contact-container,
+  .contact-links .btn {
+    font-size: 1rem;
+  }
+}
+
+/* 375px / 16px iPhone 6/7/8/X */
+@media (max-width: 23.43em) {
+  .nav-container,
+  nav,
+  a,
+  #welcome-section,
+  .project-container,
+  .project-title,
+  .project-tile,
+  .contact-container,
+  .contact-links .btn {
+    font-size: 1rem;
+  }
+}
+
+/* 360px / 16px Moto G4/Galaxy S5 */
+@media (max-width: 23.43em) {
+  .nav-container,
+  nav,
+  a,
+  #welcome-section,
+  .contact-container,
+  .contact-links .btn {
+    font-size: 1rem;
+  }
+}
+
+/* 320px / 16px iPhone 5/SE */
+@media (max-width: 22.5em) {
+  .nav-container,
+  nav,
+  a,
+  #welcome-section,
+  .project-container,
+  .project-title,
+  .project-tile,
+  .contact-container,
+  .contact-links .btn {
+    font-size: 1rem;
+  }
+}
